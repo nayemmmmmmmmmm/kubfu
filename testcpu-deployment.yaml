@@ -5,7 +5,6 @@ metadata:
     app: synergychat-testcpu
   name: synergychat-testcpu
 spec:
-  replicas: 1
   selector:
     matchLabels:
       app: synergychat-testcpu
@@ -17,3 +16,6 @@ spec:
       containers:
         - image: bootdotdev/synergychat-testcpu:latest
           name: synergychat-testcpu
+          resources:
+            limits:
+              cpu: 10m
